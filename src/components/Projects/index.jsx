@@ -7,27 +7,24 @@ import gsap from 'gsap';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 
+
 const projects = [
   {
-    title: "C2 Montreal",
+    title: "Bloggy",
     src: "c2montreal.png",
     color: "#000000"
   },
   {
-    title: "Office Studio",
+    title: "Massimo",
     src: "officestudio.png",
     color: "#8C8C8C"
   },
   {
-    title: "Locomotive",
+    title: "Megamart",
     src: "locomotive.png",
     color: "#EFE8D3"
   },
-  {
-    title: "Silencio",
-    src: "silencio.png",
-    color: "#706D63"
-  }
+  
 ]
 
 const scaleAnimation = {
@@ -75,6 +72,7 @@ export default function Home() {
     moveItems(x, y)
     setModal({active, index})
   }
+  
 
   return (
   <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={styles.projects}>
@@ -106,9 +104,9 @@ export default function Home() {
             }
             </div>
         </motion.div>
-        <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
+    
+        
     </>
   </main>
-  )
+  ) 
 }
